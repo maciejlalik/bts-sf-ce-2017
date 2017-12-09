@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+	<!-- It is always good to look at the source, Luke. -->  
+	<head>
+    <title>BTS Software Factory Coding Excersise 2017 | Maciej Lalik</title>
+		<meta name="author" content="Maciej Lalik">
+	  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<script src="assets/js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="assets/js/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="assets/bootstrap4/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/ml.css" integrity="sha256-1tq8oXLv0DP7nG7gF9Be7ruJSAcpl8JzqpoDrSCY3jo=" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+		
+		<script src="assets/engine/database.js" integrity="sha256-vmzNpYZKQ+suTelgcNQregDBCL3GVxfcX09iOzvhiJ0=" crossorigin="anonymous"></script>
+		<script src="assets/engine/drag_and_drop.js" integrity="sha256-tzxex7iyrpMS8Z4Z7PbrX9AR8ygiCB04BYCzbktXo88=" crossorigin="anonymous"></script>
+		<script src="assets/engine/main.js" integrity="sha256-/H9Sn1PZNzcx+QZswk1dcMJXvlJQgabwHvELpejzEbI=" crossorigin="anonymous"></script>
+	
+<script>
+
+</script>
+	
+	</head>
+  <body>
+
+	<div class="container">
+	
+		<h4 style="margin-top: 5px;" class="display-4 text-center">Task Manager
+		
+		</h4>
+		<hr>
+	
+	   <div class="row">
+		 
+			<div class="col-md-4 offset-md-4">
+
+				<div class="card border-success" id="card-user-0" ondragover="allowDrop(event,0)" ondragleave="dragOut()" ondrop="dropElement(event,0)">
+					<div class="card-header">
+						<span id="badge-0" class="badge badge-pill badge-info float-right"></span>
+						<i class="fa fa-fw fa-list"></i> Tasks
+					</div>
+					<ul id="user-0" class="list-group list-group-flush" style="overflow:auto;height:200px;">
+						<li class="list-group-item"><i class="fa fa-fw fa-spinner fa-pulse"></i> Loading...</li>
+
+					</ul>
+				</div>	
+			
+			</div>
+		</div>
+		<br>
+	
+    <div class="row">
+			
+			<div class="col-md-4 ">
+			
+				<div class="card" id="card-user-1" ondragover="allowDrop(event,1)" ondragleave="dragOut()" ondrop="dropElement(event,1)">
+					<div class="card-header">
+						<span id="badge-1" class="badge badge-pill badge-info float-right"></span>
+						<i class="fa fa-fw fa-user"></i> User 1
+					</div>
+					<ul id="user-1" class="list-group list-group-flush" style="overflow:auto;height:200px;">
+						<li class="list-group-item"><i class="fa fa-fw fa-spinner fa-pulse"></i> Loading...</li>
+
+					</ul>
+					<p class="container-number">1</p>
+				</div>
+				
+			</div>
+			
+			
+			<div class="col-md-4 order-md-first">
+			
+				<div class="card" id="card-user-2" ondragover="allowDrop(event,2)" ondragleave="dragOut()" ondrop="dropElement(event,2)">
+					<div class="card-header">
+						<span id="badge-2" class="badge badge-pill badge-info float-right"></span>
+						<i class="fa fa-fw fa-user"></i> User 2 
+					</div>
+					<ul id="user-2" class="list-group list-group-flush" style="overflow:auto;height:200px;">
+						<li class="list-group-item"><i class="fa fa-fw fa-spinner fa-pulse"></i> Loading...</li>
+
+					</ul>
+					<p class="container-number">2</p>
+				</div>	
+				
+			</div>
+
+
+
+			<div class="col-md-4 ">
+			
+				<div class="card" id="card-user-3" ondragover="allowDrop(event,3)" ondragleave="dragOut()" ondrop="dropElement(event,3)">
+					<div class="card-header">
+						<span id="badge-3" class="badge badge-pill badge-info float-right"></span>
+						<i class="fa fa-fw fa-user"></i> User 3
+					</div>
+					<ul id="user-3" class="list-group list-group-flush" style="overflow:auto;height:200px;">
+						<li class="list-group-item"><i class="fa fa-fw fa-spinner fa-pulse"></i> Loading...</li>
+
+					</ul>
+					<p class="container-number">3</p>
+				</div>
+				
+			</div>
+
+		</div>
+	
+	<footer>
+		<hr>
+		<div class="row">
+		
+		<div class="col-md-4">
+			<p>&copy; Copyright 2017 by Maciej Lalik</p>
+		</div>
+		<div class="col-md-4">
+			<p class="text-center">
+				<span id="btn_resetTasks" class="badge-button badge badge-pill badge-secondary"><i class="fa fa-fw fa-refresh"></i> Reset Tasks</span>
+				<span id="btn_randomizeTasks" class="badge-button badge badge-pill badge-secondary"><i class="fa fa-fw fa-random"></i> Randomize</span>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<p class="text-right">Version: 1.00</p>
+		</div>
+		
+		
+		</div>
+	</footer>
+	
+		</div> <!-- ./container -->
+  </body>
+</html>

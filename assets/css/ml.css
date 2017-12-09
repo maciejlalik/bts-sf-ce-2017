@@ -1,0 +1,76 @@
+/* Task list height */ 
+.list-group-item {
+    padding: 3px 10px
+}
+.list-group-item button {
+    padding: 0px 5px
+}
+
+/* Podium Shape - don't blame me: one of the excercise requirements :) */
+#card-user-2 {
+	margin-top: 10px;
+}
+#card-user-3 {
+	margin-top: 20px;
+}
+
+/* Container Number*/
+.container-number {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	color: #CCCCCC;
+	font-size: 3em;
+	font-family: Arial, Sans;
+}
+
+/* AssignTo Button and debug buttons */
+.badge-button,
+.assign-to {
+	visibility: hidden;
+	cursor: pointer;
+}
+
+footer:hover  .badge-button,
+.list-group-item:hover .assign-to {
+	visibility: visible;	
+}
+
+
+/* Task actions highlighting*/
+.targetHighlight {
+	border: solid 3px #17A2B8 !important;
+	margin-bottom: -3px !important;
+	padding: -3px;
+	
+}
+.newlyAssignedTask {
+	background-color: #17A2B8;
+	color: #FFFFFF;
+}
+
+/* Draggable */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+	cursor: move;
+}
+
+/* Other cosmetics */
+.btn,
+li.dropdown-item {
+	cursor: pointer;
+}
+
+.badge-button {
+	-moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+	cursor: pointer;
+}
